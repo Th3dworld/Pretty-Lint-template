@@ -7,6 +7,7 @@
     "eslint-plugin-import": "^2.31.0",
     "html-loader": "^5.1.0",
     "html-webpack-plugin": "^5.6.3",
+    "prettier": "3.5.3",
     "style-loader": "^4.0.0",
     "webpack": "^5.99.5",
     "webpack-cli": "^6.0.1",
@@ -15,6 +16,8 @@
   },
   "scripts": {
     "start": "webpack serve --open --config webpack.dev.js",
-    "build": "webpack --config webpack.prod.js"
+    "build": "webpack --config webpack.prod.js",
+    "lint": "npx eslint src/**/*.js  && npx prettier . --write",
+    "write": "npx prettier . --write"
   }
 }
